@@ -1,0 +1,40 @@
+
+* {
+  margin: 0;
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+
+.video-container {
+  display : flex;
+  justify-content: space-between; 
+  gap: 1px; 
+  max-width: 100%;  
+  margin: 1px ;  
+}
+
+.gradient {
+  background: none; 
+  background: linear-gradient(to bottom, blue,lightblue, white); 
+  margin: 0;
+  height: 100vh;
+}
+
+.striped-gradient {
+  background: repeating-linear-gradient(
+  45deg,
+  blue,
+  blue 25px,
+  black 25px,
+  black 50px);
+}
+
+h1,h2 {
+  color : white;
+}
+
+figure {
+  padding-left: 50px;
+  padding-right: 50px;
+}
