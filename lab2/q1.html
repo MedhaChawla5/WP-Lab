@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab-2 Question-1</title>
+  <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+	<div class = "form-container">
+	<h1><b>Student Bio-data Form</b></h1>
+	<form action = "#" method = "post">
+	<table>
+	<tr>
+		<td><label for ="first-name">First Name:</label></td>
+		<td><input type ="text" id = "first-name" name = "first-name" required></td>
+	</tr>
+	<tr>
+		<td><label for ="last-name">Last Name:</label></td>
+		<td><input type ="text" id = "last-name" name = "last-name" required></td>
+	</tr>
+	<tr>
+		<td><label for ="dob">Date of Birth:</label></td>
+		<td><input type = "date" id="dob" name="dob" required></td>
+	</tr>
+	<tr>
+	    <td><label>Gender:</label></td>
+        <td><div class="gender-options">
+        <label for="male">
+          <input type="radio" id="male" name="gender" value="male" required> Male
+        </label>
+        <label for="female">
+          <input type="radio" id="female" name="gender" value="female" required> Female
+        </label>
+        <label for="other">
+          <input type="radio" id="other" name="gender" value="other" required> Other
+        </label>
+      </div></td>
+  	</tr>
+
+	<tr>
+		<td><label for = "email">Email Address:</label></td>
+		<td><input type = "email" id = "email" name = "email" required></td>
+	</tr>
+	<tr>
+		<td><label>Phone Number:</label></td>
+		<td><input type = "tel" id = "phone" name="phone" required></td>
+	</tr>
+	<tr>
+		<td><label for = "address">Address:</label></td>
+		<td><textarea id = "address" name = "address" rows = "4" required></textarea></td>
+	</tr>
+	<tr>
+		<td><label>Courses Enrolled:</label></td>
+      	<td><div class="course-options">
+        <label for="course1">
+          <input type="checkbox" id="course1" name="courses" value="Math"> Math
+        </label>
+        <label for="course2">
+          <input type="checkbox" id="course2" name="courses" value="Science"> Science
+        </label>
+        <label for="course3">
+          <input type="checkbox" id="course3" name="courses" value="History"> History
+        </label>
+        <label for="course4">
+          <input type="checkbox" id="course4" name="courses" value="English"> English
+        </label>
+        <label for="course5">
+          <input type="checkbox" id="course5" name="courses" value="Art"> Art
+        </label>
+      	</div></td>
+     </tr>
+     <tr>
+      	<td><label for="photo">Upload Photo:</label></td>
+      	<td><input type="file" id="photo" name="photo" accept="image/*" required></td>
+      </tr>
+    <tr>
+    	<td colspan="2">
+      	<button  class = "submit-btn" type = "submit">Submit</button>
+      	<button class = "reset-btn" type = "reset">Reset</button>
+      </td>
+      </tr>
+      </table>
+	</form>
+	</div>
+</body>
+</html>

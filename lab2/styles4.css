@@ -1,0 +1,171 @@
+/* General Page Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f8ff;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Header Section */
+.container-fluid.bg-dark {
+  background-color: #007bff !important; /* Bright Blue */
+  color: white;
+  padding: 50px 0;
+}
+
+h1.display-4 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+p.lead {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Timetable Table Styling */
+.table {
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  margin-top: 30px;
+  background-color: #ffffff;
+}
+
+.table th, .table td {
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #eaf0fa; /* Light Blue */
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+  background-color: #f9f9f9; /* Light Gray */
+}
+
+.table-dark {
+  background-color: #343a40;
+  color: white;
+}
+
+.table-bordered {
+  border: 1px solid #ddd;
+}
+
+table th {
+  font-size: 1.1rem;
+  background-color: #28a745; /* Green background for headers */
+  color: white;
+}
+
+table td {
+  font-size: 1rem;
+  background-color: #f8f9fa;
+  color: #343a40;
+}
+
+/* Carousel Section */
+.carousel-item {
+  padding-bottom: 40px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #343a40;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  width: 5%;
+}
+
+/* Centering the table and heading within each carousel item */
+.container.mt-4 {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Carousel Navigation */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: #007bff; /* Matching with header */
+  border-radius: 50%;
+}
+
+/* Timetable Day Titles */
+h2.text-center {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 30px;
+  text-decoration: underline;
+  color: #ff6347; /* Tomato red color for days */
+}
+
+/* For the entire carousel container */
+#timetableCarousel {
+  margin-top: 50px;
+}
+
+/* Time Slot Background Colors */
+.table td:first-child {
+  background-color: #f1c40f; /* Yellow for time slots */
+  color: white;
+  font-weight: bold;
+}
+
+/* Holiday (Sunday) Section */
+.carousel-item:last-child {
+  background-color: #f8f9fa;
+}
+
+.carousel-item:last-child h2.text-center {
+  color: #ff4500; /* Orange-red for Sunday */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .container-fluid.bg-dark {
+    padding: 30px 0;
+  }
+
+  h1.display-4 {
+    font-size: 2rem;
+  }
+
+  p.lead {
+    font-size: 1rem;
+  }
+
+  .carousel-item {
+    padding-bottom: 30px;
+  }
+
+  .table th, .table td {
+    padding: 10px;
+  }
+
+  .table th {
+    font-size: 1rem;
+  }
+
+  .table td {
+    font-size: 0.9rem;
+  }
+}
+
+/* Active Carousel Item */
+.carousel-item.active {
+  background-color: #d1ecf1; /* Light Blue for active days */
+}
+
+/* Zebra Striping for Classes */
+.table-striped tbody tr:nth-child(odd) {
+  background-color: #b3d9f7; /* Lighter blue */
+}
+
+.table-striped tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Light Gray */
+}
