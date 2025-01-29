@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Selector</title>
+    <style>
+        .rectangle {
+            width: 200px;
+            height: 100px;
+            margin-top: 20px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h2>Select a Color:</h2>
+    <input type="radio" name="color" value="red" onclick="changeColor('red')"> Red
+    <input type="radio" name="color" value="green" onclick="changeColor('green')"> Green
+    <input type="radio" name="color" value="blue" onclick="changeColor('blue')"> Blue
+    
+    <div id="rectangle" class="rectangle"></div>
+
+    <script>
+        function changeColor(color) {
+            document.getElementById("rectangle").style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>

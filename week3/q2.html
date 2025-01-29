@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Size Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: white;
+        }
+        #text {
+            font-size: 5pt;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="text">FONT+++</div>
+    <script>
+        let textElement = document.getElementById("text");
+        let fontSize = 5;
+        let increasing = true;
+
+        function animateFont() {
+            if (increasing) {
+                fontSize += 2;
+                if (fontSize >= 40) {
+                    increasing = false;
+                    textElement.textContent = "FONT---";
+                    textElement.style.color = "blue";
+                }
+            } else {
+                fontSize -= 2;
+                if (fontSize <= 5) {
+                    increasing = true;
+                    textElement.textContent = "FONT+++";
+                    textElement.style.color = "red";
+                }
+            }
+            textElement.style.fontSize = fontSize + "pt";
+        }
+
+        setInterval(animateFont, 200);
+    </script>
+</body>
+</html>
