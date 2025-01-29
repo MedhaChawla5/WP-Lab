@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Registration Form</title>
+    <link rel="stylesheet" href="h1.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Conference Registration Form</h1>
+        <form action="submit.php" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Participant Details</legend>
+                <label for="full-name">Full Name:</label>
+                <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="10-digit phone number" required>
+                
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="18" max="60" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Event Preferences</legend>
+                <label for="events">Select Events (Max 2):</label>
+                <select id="events" name="events[]" multiple size="5" required>
+                    <option value="coding-contest">Coding Contest</option>
+                    <option value="hackathon">Hackathon</option>
+                    <option value="paper-presentation">Paper Presentation</option>
+                    <option value="robotics-challenge">Robotics Challenge</option>
+                    <option value="keynote-session">Keynote Session</option>
+                </select>
+                <p class="note">Hold Ctrl (Windows) or Command (Mac) to select multiple options.</p>
+            </fieldset>
+
+            
+            <fieldset>
+                <legend>Accommodation Details</legend>
+                <label><input type="radio" name="accommodation" value="hostel" required> Hostel</label>
+                <label><input type="radio" name="accommodation" value="hotel" required> Hotel</label>
+                <label><input type="radio" name="accommodation" value="none" required> None</label>
+            </fieldset>
+
+            
+            <fieldset>
+                <legend>Dietary Preferences</legend>
+                <label><input type="checkbox" name="diet[]" value="vegetarian"> Vegetarian</label>
+                <label><input type="checkbox" name="diet[]" value="non-vegetarian"> Non-Vegetarian</label>
+                <label><input type="checkbox" name="diet[]" value="vegan"> Vegan</label>
+                <label><input type="checkbox" id="other-diet" name="diet[]" value="other"> Other</label>
+                <input type="text" id="other-diet-specify" name="other-diet-specify" placeholder="Specify other preferences" disabled>
+            </fieldset>
+
+            
+            <fieldset>
+                <legend>Additional Info</legend>
+                <label for="student-id">Upload Student ID (PDF only, max 5 MB):</label>
+                <input type="file" id="student-id" name="student-id" accept=".pdf" required>
+                
+                <label for="comments">Comments/Requests:</label>
+                <textarea id="comments" name="comments" placeholder="Write your comments here (optional)" maxlength="300"></textarea>
+            </fieldset>
+
+            
+            <fieldset>
+                <legend>Consent and Submission</legend>
+                <label><input type="checkbox" name="terms" required> I agree to the terms and conditions.</label>
+                <div class="buttons">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <script>
+        
+        const eventsDropdown = document.getElementById('events');
+        eventsDropdown.addEventListener('change', () => {
+            const selectedOptions = Array.from(eventsDropdown.selectedOptions);
+            if (selectedOptions.length > 2) {
+                selectedOptions[selectedOptions.length - 1].selected = false;
+                alert("You can select a maximum of 2 events.");
+            }
+        });
+
+        const otherDietCheckbox = document.getElementById('other-diet');
+        const otherDietInput = document.getElementById('other-diet-specify');
+        otherDietCheckbox.addEventListener('change', () => {
+            otherDietInput.disabled = !otherDietCheckbox.checked;
+        });
+    </script>
+</body>
+</html>
