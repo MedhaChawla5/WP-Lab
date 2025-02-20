@@ -1,0 +1,24 @@
+<!-- bookinfo/templates/bookinfo/metadata.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Metadata</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Book Metadata</h1>
+        <p><strong>Title:</strong> Example Book Title</p>
+        <p><strong>Author:</strong> John Doe</p>
+        <p><strong>Genre:</strong> Fiction</p>
+        <p><strong>Published:</strong> 2025</p>
+        <div class="links">
+            <a href="{% url 'home' %}">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!-- bookinfo/templates/bookinfo/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Information</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Book Information</h1>
+        <div class="cover">
+            <img src="https://via.placeholder.com/300x400?text=Book+Cover" alt="Book Cover">
+        </div>
+        <div class="links">
+            <a href="{% url 'metadata' %}">Metadata</a>
+            <a href="{% url 'reviews' %}">Reviews</a>
+            <a href="{% url 'publisher_info' %}">Publisher Info</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!-- bookinfo/templates/bookinfo/publisher_info.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publisher Info</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Publisher Information</h1>
+        <p><strong>Publisher Name:</strong> Example Publishing House</p>
+        <p><strong>Address:</strong> 123 Book St, Fiction City, 12345</p>
+        <p><strong>Contact:</strong> contact@publishinghouse.com</p>
+        <div class="links">
+            <a href="{% url 'home' %}">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!-- bookinfo/templates/bookinfo/reviews.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Reviews</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Book Reviews</h1>
+        <p><strong>Review 1:</strong> "An amazing read! Highly recommend."</p>
+        <p><strong>Review 2:</strong> "Very interesting plot and characters."</p>
+        <p><strong>Review 3:</strong> "A bit slow at the beginning, but worth the read."</p>
+        <div class="links">
+            <a href="{% url 'home' %}">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
